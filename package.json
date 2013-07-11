@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "q": ">= 0.9.6"
   },
   "devDependencies": {
     "jasmine-node": ">= 1.8.1"
