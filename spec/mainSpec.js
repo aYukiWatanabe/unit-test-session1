@@ -135,9 +135,26 @@ describe('Field', function() {
   });
 
   // 演習で実装する非同期のテストケース
-  /*
   it('should clear mine on the mass by asynchronous call', function() {
+    var ps = createMinePositions(2);
+    var count = 0;
+
+    ps.forEach(function(m) {
+      field.setMineAsyncByCallback(m.x, m.y);
+    });
+    ps.forEach(function(m) {
+      field.unsetMineAsyncByCallback(m.x, m.y, function(err) {
+        count++;
+      });
+    });
+
+    waitsFor(function() {
+      return count === ps.length;
+    });
+
+    runs(function() {
+      verifyMinesOnField(field, []);
+    });
   });
-  */
 
 });
