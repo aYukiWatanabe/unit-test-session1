@@ -122,10 +122,17 @@ describe('Field', function() {
   });
 
   // 演習で実装するシンプルなテストケース
-  /*
   it('should clear mine on the mass', function() {
+    var ps = createMinePositions(2);
+    ps.forEach(function(m) {
+      field.setMine(m.x, m.y);
+    });
+    ps.forEach(function(m) {
+      field.unsetMine(m.x, m.y);
+    });
+
+    verifyMinesOnField(field, []);
   });
-  */
 
   // 演習で実装する非同期のテストケース
   /*
