@@ -26,6 +26,7 @@ describe('Field', function() {
   };
   
   // 地雷が指定された位置に存在するかどうかテストとして評価する
+  // expectをヘルパー関数で呼ぶのではなく、カスタムmatcherを作る正しいが、入門としては複雑すぎるので今回は作らない
   var verifyMinesOnField = function(f, ps) {
     for (var x = 0; x < xSize; x++) {
       for (var y = 0; y < ySize; y++) {
@@ -37,7 +38,6 @@ describe('Field', function() {
       }
     }
   };
-
 
   // 各テストの前に実行される
   beforeEach(function() {
