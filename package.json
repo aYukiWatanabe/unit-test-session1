@@ -1,6 +1,7 @@
 {
   "name": "simple-mine",
   "version": "0.0.0",
+  "private": true,
   "description": "Sample Code of Unit Test",
   "main": "lib/main.js",
   "scripts": {
